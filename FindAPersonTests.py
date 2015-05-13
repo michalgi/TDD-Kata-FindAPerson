@@ -20,8 +20,10 @@ class FindAPersonTests(unittest.TestCase):
         self.assertTrue(location_exist)
 		
     def test_existingLocationInformissingName(self):
-        location_exist = self.crowdmap.is_location_for_name("Joe")
-        self.assertFalse(location_exist)
+        location_exist = self.crowdmap.is_location_for_name("Or")
+        self.assertTrue(location_exist)
+		
+
 			
         
 if __name__ == '__main__':
