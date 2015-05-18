@@ -29,7 +29,7 @@ class FindAPersonTests(unittest.TestCase):
 		
     def test_if_there_are_map_inconsistencies(self):
         location_exist = self.crowdmap.if_there_are_map_inconsistencies("Or A.")
-        self.assertTrue(location_exist)		
+        self.assertFalse(location_exist)		
 		
 		
 
