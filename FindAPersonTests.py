@@ -36,7 +36,14 @@ class FindAPersonTests(unittest.TestCase):
                                   "We found Or A. R.I.P at AA valley",
                                   "Missing Cowboy"])
         location_exist =crowdmap_with_consistencies.if_there_are_map_inconsistencies("Or A.")
-        self.assertFalse(location_exist)		
+        self.assertFalse(location_exist)
+		
+    def test_if_there_are_map_inconsistencies_allnameplace(self):
+        crowdmap_with_consistencies = Crowdmap(["I met Or A. at AAB house Bangkok",
+                                  "We found Or A. R.I.P at AAA valley",
+                                  "Missing Cowboy"])
+        location_exist =crowdmap_with_consistencies.if_there_are_map_inconsistencies("Or A.")
+        self.assertTrue(location_exist)			
 
 			
         
