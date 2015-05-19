@@ -13,5 +13,6 @@ class Crowdmap(object):
 		posts = [post for post in self.list if post.find(name) != -1 and post.find("at") != -1]
 		x=posts[0].index("at")
 		posts1 = [post for post in self.list if post.find(name) != -1 and  post.find(posts[0][x:x+4]) != -1]
+		print '\n'+posts[0][x:x+4]
 		return len(posts) != len(posts1)
 		
